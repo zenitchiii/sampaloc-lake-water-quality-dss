@@ -1,2 +1,2 @@
 # sampaloc-lake-water-quality-dss
-IoT-based water quality monitoring for Sampaloc Lake, using multivariate regression to model dissolved oxygen and support decision-making.
+Development of an IoT-based Water Quality Monitoring System Using Multivariate Predictive Modeling of Dissolved Oxygen via Regression for Decision Support System of Sampaloc Lake
