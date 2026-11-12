@@ -1,0 +1,30 @@
+@font-face {
+  font-family: Outfit;
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/outfit-latin.woff2') format('woff2');
+}
+html { scroll-behavior: smooth; scroll-padding-top: calc(90px + env(safe-area-inset-top, 0px)); }
+html, body { margin: 0; min-height: 100%; background: #d4d4d2; }
+body { font-family: Outfit, system-ui, sans-serif; }
+@property --bg { syntax:"<color>"; inherits:true; initial-value:#d4d4d2; }
+@property --panel { syntax:"<color>"; inherits:true; initial-value:#ececeb; }
+@property --card { syntax:"<color>"; inherits:true; initial-value:#f9f9f8; }
+@property --in { syntax:"<color>"; inherits:true; initial-value:#e4e4e2; }
+@property --tx { syntax:"<color>"; inherits:true; initial-value:#151515; }
+@property --mu { syntax:"<color>"; inherits:true; initial-value:#5f5f5f; }
+@property --ln { syntax:"<color>"; inherits:true; initial-value:#e0e0de; }
+@property --ort { syntax:"<color>"; inherits:true; initial-value:#ffe6d5; }
+@property --orl { syntax:"<color>"; inherits:true; initial-value:#ffd9c2; }
+@property --ink { syntax:"<color>"; inherits:true; initial-value:#111; }
+@property --onink { syntax:"<color>"; inherits:true; initial-value:#fff; }
+/* Interpolate the shared palette so every surface and SVG changes together. */
+.landing-page,.dashboard-page {
+  transition:--bg .45s ease-in-out,--panel .45s ease-in-out,--card .45s ease-in-out,--in .45s ease-in-out,--tx .45s ease-in-out,--mu .45s ease-in-out,--ln .45s ease-in-out,--ort .45s ease-in-out,--orl .45s ease-in-out,--ink .45s ease-in-out,--onink .45s ease-in-out;
+}
+html,body { transition:background-color .45s ease-in-out; }
+@media (prefers-color-scheme: dark) { html, body { background: #0f0f0e; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (prefers-reduced-motion: reduce) { html,body,.landing-page,.dashboard-page { transition:none!important; } }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
